@@ -172,3 +172,20 @@ describe('UserModel', function () {
 
 ```
 ## Felhasználói dokumentáció
+
+- Fejlesztési módszertan:
+Egységesített Eljárás
+- A fejlesztéshez tesztelt hardver:
+CPU: Intel(R) Core(TM) i5-2410M CPU @ 2,30GHz 2.30 GHz , 
+RAM: 8,00 GB, videó: 1366x768
+- A fejlesztéshez használt szoftverek:
+Operációs rendszer: Windows 7 Ultimate 64 bit
+- Követelmény elemzés: Word szövegszerkesztővel, dokumentum-sablonok használatával
+Cloud9 & node.js fejlesztői környezet.
+- A futtatáshoz szükséges operációs rendszer:
+Tetszőleges operációs rendszer.
+- A futtatáshoz szükséges hardver:
+Operációs rendszerek szerint megadva
+- Egyéb: 
+Intuitív felhasználói felület, könnyű kezelhetőség
+
