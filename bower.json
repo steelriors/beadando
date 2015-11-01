@@ -1,10 +1,10 @@
 {
-  "name": "hibabejelento",
-  "version": "0.0.0",
+  "name": "Felicium Record",
+  "version": "1.0.0",
   "authors": [
-    "eltezalan <kereszti.zalan@gmail.com>"
+    "steelriors <gergo.kiss.93@gmail.com>"
   ],
-  "description": "Hibabejelento alkalmazas",
+  "description": "Lemezrendelős alkalmazás",
   "license": "MIT",
   "ignore": [
     "**/.*",

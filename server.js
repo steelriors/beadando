@@ -51,15 +51,15 @@ passport.deserializeUser(function(obj, done) {
 
 // Local Strategy for sign-up
 passport.use('local-signup', new LocalStrategy({
-        usernameField: 'neptun',
+        usernameField: 'felhasznalo_nev',
         passwordField: 'password',
         passReqToCallback: true,
     },   
-    function(req, neptun, password, done) {
-        req.app.models.user.findOne({ neptun: neptun }, function(err, user) {
+    function(req, felhasznalo_nev, password, done) {
+        req.app.models.user.findOne({ felhasznalo_nev: felhasznalo_nev }, function(err, user) {
             if (err) { return done(err); }
             if (user) {
-                return done(null, false, { message: 'Létező neptun.' });
+                return done(null, false, { message: 'Létező felhasználó név.' });
             }
             req.app.models.user.create(req.body)
             .then(function (user) {
@@ -74,12 +74,12 @@ passport.use('local-signup', new LocalStrategy({
 
 // Stratégia
 passport.use('local', new LocalStrategy({
-        usernameField: 'neptun',
+        usernameField: 'felhasznalo_nev',
         passwordField: 'password',
         passReqToCallback: true,
     },
-    function(req, neptun, password, done) {
-        req.app.models.user.findOne({ neptun: neptun }, function(err, user) {
+    function(req, felhasznalo_nev, password, done) {
+        req.app.models.user.findOne({ felhasznalo_nev: felhasznalo_nev }, function(err, user) {
             if (err) { return done(err); }
             if (!user || !user.validPassword(password)) {
                 return done(null, false, { message: 'Helytelen adatok.' });
@@ -162,11 +162,6 @@ orm.initialize(waterlineConfig, function(err, models) {
     app.models = models.collections;
     app.connections = models.connections;
     
-    // Start Server
-    //var port = process.env.PORT || 3000;
-    //app.listen(port, function () {
-    //    console.log('Server is started.');
-    //});
     var port = process.env.PORT;
     var host = process.env.IP;
     var server = app.listen(port, host, function(){console.log('Server is started.');});

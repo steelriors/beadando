@@ -31,6 +31,28 @@
         "createdAt": "2015-11-01T00:27:36.341Z",
         "updatedAt": "2015-11-01T00:27:36.341Z",
         "id": 1
+      },
+      {
+        "surname": "Test",
+        "forename": "Erke",
+        "neptun": "test1",
+        "password": "$2a$10$JjZMYN93EuxY8emPuixXZO5YtRU0F.rFCtFL/iU9uy/0Pz4mxfUmG",
+        "avatar": "vmi.jpg",
+        "role": "riporter",
+        "createdAt": "2015-11-01T08:25:04.296Z",
+        "updatedAt": "2015-11-01T08:25:04.296Z",
+        "id": 2
+      },
+      {
+        "surname": "Test",
+        "forename": "Erinke",
+        "neptun": "Test2",
+        "password": "$2a$10$bKbFokJmh7JKbKOc/T3RVeuF0L1Kocr0UAI1LxOlOM/phx/.ZXp1a",
+        "avatar": "vmi2.jpg",
+        "role": "riporter",
+        "createdAt": "2015-11-01T08:34:18.856Z",
+        "updatedAt": "2015-11-01T08:34:18.856Z",
+        "id": 3
       }
     ]
   },
@@ -118,7 +140,7 @@
       "id": 2
     },
     "user": {
-      "id": 1
+      "id": 3
     }
   }
 }

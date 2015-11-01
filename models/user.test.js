@@ -28,10 +28,10 @@ describe('UserModel', function () {
 
     function getUserData() {
         return {
-            neptun: 'abcdef',
-            password: 'jelszo',
-            surname: 'Gipsz',
-            forename: 'Jakab',
+            felhasznalo_nev: 'abc123',
+            password: 'jelszo1',
+            surname: 'Kovács',
+            forename: 'Béla',
             avatar: '',
         };
     }
@@ -44,17 +44,17 @@ describe('UserModel', function () {
     
     it('should be able to create a user', function () {
         return User.create({
-                neptun: 'abcdef',
-                password: 'jelszo',
-                surname: 'Gipsz',
-                forename: 'Jakab',
+                felhasznalo_nev: 'abc123',
+                password: 'jelszo1',
+                surname: 'Kovács',
+                forename: 'Béla',
                 avatar: '',
         })
         .then(function (user) {
-            expect(user.neptun).to.equal('abcdef');
-            expect(bcrypt.compareSync('jelszo', user.password)).to.be.true;
-            expect(user.surname).to.equal('Gipsz');
-            expect(user.forename).to.equal('Jakab');
+            expect(user.felhasznalo_nev).to.equal('abc123');
+            expect(bcrypt.compareSync('jelszo1', user.password)).to.be.true;
+            expect(user.surname).to.equal('Kovács');
+            expect(user.forename).to.equal('Béla');
             expect(user.avatar).to.equal('');
         });
     });
@@ -65,10 +65,10 @@ describe('UserModel', function () {
             return User.findOneByNeptun(user.neptun);
         })
         .then(function (user) {
-            expect(user.neptun).to.equal('abcdef');
-            expect(bcrypt.compareSync('jelszo', user.password)).to.be.true;
-            expect(user.surname).to.equal('Gipsz');
-            expect(user.forename).to.equal('Jakab');
+            expect(user.felhasznalo_nev).to.equal('abc123');
+            expect(bcrypt.compareSync('jelszo1', user.password)).to.be.true;
+            expect(user.surname).to.equal('Kovács');
+            expect(user.forename).to.equal('Béla');
             expect(user.avatar).to.equal('');
         });
     });
