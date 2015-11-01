@@ -1,0 +1,47 @@
+
+{{#extend "scripts"}}
+<script src="/lib/bootstrap-validator/dist/validator.min.js"></script>
+{{/extend}}
+
+<div class="page-header">
+    <h1>Új lemez rendelése</h1>
+</div>
+
+<form class="form-horizontal" method="post">
+    <fieldset>
+        <div class="form-group
+            {{#if validationErrors.helyszin}}
+                has-error
+            {{/if}}
+        ">
+            <label for="helyszin" class="col-lg-2 control-label">Lakhely</label>
+            <div class="col-lg-10">
+                <input class="form-control" id="helyszin" name="helyszin" placeholder="Irányítószám/Utca/Város" type="text" value="{{data.helyszin}}">
+                {{#if validationErrors.helyszin}}
+                    <span class="help-block">{{validationErrors.helyszin.msg}}</span>
+                {{/if}}
+            </div>
+        </div>
+        <div class="form-group
+            {{#if validationErrors.leiras}}
+                has-error
+            {{/if}}
+        ">
+            <label for="leiras" class="col-lg-2 control-label">Lemezcím</label>
+            <div class="col-lg-10">
+                <textarea class="form-control" rows="3" id="leiras" name="leiras">{{data.leiras}}</textarea>
+                <span class="help-block">Meg kell adni az előadót is, a félreértések elkerülése végett.</span>
+                {{#if validationErrors.leiras}}
+                    <span class="help-block">{{validationErrors.leiras.msg}}</span>
+                {{/if}}
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-lg-10 col-lg-offset-2">
+                <button type="reset" class="btn btn-default">Cancel</button>
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </div>
+        </div>
+    </fieldset>
+</form>
+

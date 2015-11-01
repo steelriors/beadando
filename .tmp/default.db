@@ -1,0 +1,124 @@
+{
+  "data": {
+    "error": [
+      {
+        "status": "new",
+        "location": "7900 Turbék u. 57. Szigetvár",
+        "description": "Acid Victoria - UhhAhh",
+        "date": "2015-11-01T00:29:08.103Z",
+        "createdAt": "2015-11-01T00:29:08.104Z",
+        "updatedAt": "2015-11-01T00:29:08.104Z",
+        "id": 1
+      },
+      {
+        "status": "new",
+        "location": "7900 Turbék u. 57. Szigetvár",
+        "description": "Metallica - St Anger",
+        "date": "2015-11-01T00:29:32.220Z",
+        "createdAt": "2015-11-01T00:29:32.221Z",
+        "updatedAt": "2015-11-01T00:29:32.221Z",
+        "id": 2
+      }
+    ],
+    "user": [
+      {
+        "surname": "Kiss",
+        "forename": "Gergő",
+        "neptun": "Steelriors",
+        "password": "$2a$10$XtDAAwsq5B6M3vXcqxc4NeIm8vmD/GurgI29eScC14Lr4KBK7yN/u",
+        "avatar": "http://images.halloweencostumes.com/products/2881/1-1/kids-cryptic-rocker-costume.jpg",
+        "role": "riporter",
+        "createdAt": "2015-11-01T00:27:36.341Z",
+        "updatedAt": "2015-11-01T00:27:36.341Z",
+        "id": 1
+      }
+    ]
+  },
+  "schema": {
+    "error": {
+      "date": {
+        "type": "datetime"
+      },
+      "status": {
+        "type": "string",
+        "enum": [
+          "new",
+          "assigned",
+          "success",
+          "rejected",
+          "pending"
+        ]
+      },
+      "location": {
+        "type": "string"
+      },
+      "description": {
+        "type": "string"
+      },
+      "user": {
+        "type": "integer",
+        "model": "user",
+        "foreignKey": true,
+        "alias": "user"
+      },
+      "id": {
+        "type": "integer",
+        "autoIncrement": true,
+        "primaryKey": true,
+        "unique": true
+      },
+      "createdAt": {
+        "type": "datetime"
+      },
+      "updatedAt": {
+        "type": "datetime"
+      }
+    },
+    "user": {
+      "neptun": {
+        "type": "string",
+        "unique": true
+      },
+      "password": {
+        "type": "string"
+      },
+      "surname": {
+        "type": "string"
+      },
+      "forename": {
+        "type": "string"
+      },
+      "avatar": {
+        "type": "string"
+      },
+      "role": {
+        "type": "string",
+        "enum": [
+          "riporter",
+          "operator"
+        ],
+        "defaultsTo": "riporter"
+      },
+      "id": {
+        "type": "integer",
+        "autoIncrement": true,
+        "primaryKey": true,
+        "unique": true
+      },
+      "createdAt": {
+        "type": "datetime"
+      },
+      "updatedAt": {
+        "type": "datetime"
+      }
+    }
+  },
+  "counters": {
+    "error": {
+      "id": 2
+    },
+    "user": {
+      "id": 1
+    }
+  }
+}

@@ -1,2 +1,2 @@
-# beadando
-első beadandó feladat: Alkalmazások Fejlesztése tárgyból.
+# Beadando
+Első beadandó feladat: Alkalmazások Fejlesztése tárgyból.

@@ -1,0 +1,39 @@
+{{#extend "scripts"}}
+<script src="/js/list.js"></script>
+{{/extend}}
+
+{{#each messages}}
+<div class="alert alert-dismissible alert-success">
+    <button type="button" class="close" data-dismiss="alert">×</button>
+    {{this}}
+</div>
+{{/each}}
+
+<div class="page-header">
+    <h1>Rendelt lemezeim</h1>
+</div>
+
+<table class="table table-striped table-hover" id="errorTable">
+    <thead>
+        <tr>
+            <th>Időpont</th>
+            <th>Státusz</th>
+            <th>Lakhely</th>
+            <th>Lemezcím</th>
+        </tr>   
+    </thead>
+    <tbody>
+        {{#each errors}}
+        <tr>
+            <td>{{date}}</td>
+            <td><span class="label label-{{statusClass}}">{{statusText}}</span></td>
+            <td>{{location}}</td>
+            <td><span class="badge">{{numberOfMessages}}</span> {{description}}</td>
+            <td> <button type="reset" class="btn btn-default">Edit</button> </td>
+            <td> <button type="reset" class="btn btn-default">Delete</button> </td>
+        </tr>
+        {{/each}}
+    </tbody>
+</table>
+
+<p><a href="/errors/new" class="btn btn-default">Új rendelés felvétele</a></p>
