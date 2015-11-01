@@ -1,4 +1,3 @@
-
 var expect = require("chai").expect;
 var bcrypt = require('bcryptjs');
 
@@ -28,7 +27,7 @@ describe('UserModel', function () {
 
     function getUserData() {
         return {
-            felhasznalo_nev: 'abc123',
+            neptun: 'abc123',
             password: 'jelszo1',
             surname: 'Kovács',
             forename: 'Béla',
@@ -44,14 +43,14 @@ describe('UserModel', function () {
     
     it('should be able to create a user', function () {
         return User.create({
-                felhasznalo_nev: 'abc123',
+                neptun: 'abc123',
                 password: 'jelszo1',
                 surname: 'Kovács',
                 forename: 'Béla',
                 avatar: '',
         })
         .then(function (user) {
-            expect(user.felhasznalo_nev).to.equal('abc123');
+            expect(user.neptun).to.equal('abc123');
             expect(bcrypt.compareSync('jelszo1', user.password)).to.be.true;
             expect(user.surname).to.equal('Kovács');
             expect(user.forename).to.equal('Béla');
@@ -65,7 +64,7 @@ describe('UserModel', function () {
             return User.findOneByNeptun(user.neptun);
         })
         .then(function (user) {
-            expect(user.felhasznalo_nev).to.equal('abc123');
+            expect(user.neptun).to.equal('abc123');
             expect(bcrypt.compareSync('jelszo1', user.password)).to.be.true;
             expect(user.surname).to.equal('Kovács');
             expect(user.forename).to.equal('Béla');

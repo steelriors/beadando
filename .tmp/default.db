@@ -18,6 +18,15 @@
         "createdAt": "2015-11-01T00:29:32.221Z",
         "updatedAt": "2015-11-01T00:29:32.221Z",
         "id": 2
+      },
+      {
+        "status": "new",
+        "location": "7900 Turbék u. 57. Szigetvár",
+        "description": "Iron Maiden - Somewhere  In Times",
+        "date": "2015-11-01T21:10:11.786Z",
+        "createdAt": "2015-11-01T21:10:11.787Z",
+        "updatedAt": "2015-11-01T21:10:11.787Z",
+        "id": 3
       }
     ],
     "user": [
@@ -53,6 +62,17 @@
         "createdAt": "2015-11-01T08:34:18.856Z",
         "updatedAt": "2015-11-01T08:34:18.856Z",
         "id": 3
+      },
+      {
+        "surname": "Kisss",
+        "forename": "Gerrri",
+        "neptun": "Hidas",
+        "password": "$2a$10$yiXjCPRu82mZJiZPg.2EPehBuVyZyciKBHX4nfdg4CM3Jl9u/4xmu",
+        "avatar": "vmi.jpg",
+        "role": "riporter",
+        "createdAt": "2015-11-01T21:09:30.779Z",
+        "updatedAt": "2015-11-01T21:09:30.779Z",
+        "id": 4
       }
     ]
   },
@@ -137,10 +157,10 @@
   },
   "counters": {
     "error": {
-      "id": 2
+      "id": 3
     },
     "user": {
-      "id": 3
+      "id": 4
     }
   }
 }

@@ -1,4 +1,3 @@
-
 var express = require('express');
 var passport = require('passport');
 
@@ -31,4 +30,3 @@ router.post('/signup', passport.authenticate('local-signup', {
 }));
 
 module.exports = router;
-

@@ -32,8 +32,35 @@ Ezenkívül célunk az is, hogy a beküldött rendelést módunkban álljon tör
 ![Használati eset diagramm](http://s14.postimg.org/hd6vjkm9d/Hasznalat_eset_diag.png)
 ![Kép felirata](docs/images/Hasznalat_eset_diag.png)
 
+#### Activity diagram:
+![Activity diagramm](http://s7.postimg.org/3qkfnv3cr/activity.png)
 
 ## Tervezés
+
+###1. Felhasználóifelület-modell
+####1.1 Főoldal:
+![Design1](http://s14.postimg.org/wnrx5ihf5/design1.png)
+####1.2 Login:
+![Design2](http://s15.postimg.org/664ic1ltn/design2.png)
+####1.3 Lista oldal:
+![Design3](http://s15.postimg.org/79omo06gr/design3.png)
+
+###2. Osztálymodell
+####2.1 Adatmodell
+![Adatmodell](http://s1.postimg.org/c4439z58f/datamodel.png)
+
+####2.2 Adatbázisterv
+![Adatmodell](http://s13.postimg.org/hla1fefqv/database.png)
+
+####2.3 Állapotdiagram
+![Adatmodell](http://s13.postimg.org/opruofn07/allapot.png)
+
+###3. Dinamikus működés
+####Szekvenciadiagram
+![Adatmodell](http://s10.postimg.org/txeyerog9/szekvencia.png)
+
+###Komponens diagramm:
+![Adatmodell](http://s21.postimg.org/6ensq6glz/KOMPONentdiag.png)
 
 ## Implementáció
 ###1. Fejlesztői környezet bemutatása
@@ -180,7 +207,7 @@ CPU: Intel(R) Core(TM) i5-2410M CPU @ 2,30GHz 2.30 GHz ,
 RAM: 8,00 GB, videó: 1366x768
 - A fejlesztéshez használt szoftverek:
 Operációs rendszer: Windows 7 Ultimate 64 bit
-- Követelmény elemzés: Word szövegszerkesztővel, dokumentum-sablonok használatával
+- Követelmény elemzés: Markdown és GFM használata
 Cloud9 & node.js fejlesztői környezet.
 - A futtatáshoz szükséges operációs rendszer:
 Tetszőleges operációs rendszer.
@@ -189,3 +216,6 @@ Operációs rendszerek szerint megadva
 - Egyéb: 
 Intuitív felhasználói felület, könnyű kezelhetőség
 
+Maga a program használata végig értelemszerű. Kapunk egy főoldalt, melyből áttudunk kattintani a bejelentkező felületre, ahol ha még nem tettük meg, akkor regisztrálhatunk.
+Regisztráció és/vagy bejelentkezés után egy lista oldalt kapunk ahol felvehetünk új rendelést a kért adatok (lakhely, lemezcím) megadásával
+Ezenkívül lehetőségünk van még szerkesztésre és listaelem törlésére. (---)
